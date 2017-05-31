@@ -1,0 +1,85 @@
+body{
+	background-color: #e6e6e6;
+	background-size:cover;
+	margin-left: 125px;
+	margin-right: 125px;
+}
+
+footer{
+	background-color: #333333;
+	margin-top: 45px;
+	color: #cc6600;
+	text-align: center;
+	font-size: 14px;
+	padding: 12px;
+}
+
+h1{
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight: bold;
+	color: #cc6600;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+li {
+	display: inline;
+    float: right;
+}
+
+li a {
+    display: block;
+    color: #cc6600;
+	font-weight: bold;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #595959;
+}
+
+#signup, #create{
+	border: 2px solid-gray;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight: bold;
+	padding: 25px;
+	width: 100%;
+}
+
+button{
+	float: right;
+	margin-right: 200px;
+	padding: 15px 20px;
+	font-weight: bold;
+	background-color: #b3b3b3;	
+}
+
+button:hover{
+	background-color: #737373;
+}
+
+th{
+	font-size: 23px;
+	text-decoration: underline;
+}
+
+#listusers{
+	border: 2px solid-gray;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-weight: bold;
+	padding: 15px;
+	width: 100%;
+	text-align: left;
+}
+
+p{
+	font-size: 16px;
+}
