@@ -15,20 +15,31 @@
 			<table id="signup" class="form">
 				<tr>
 					<td>Name<br>
-						<input type="text" name="name">
+						<input type="text" name="name"><br>
 					</td>
 					<td>User ID<br>
-						<input type="text" name="userID">
+						<input type="text" name="userID"><br>
 				</tr>
 				<tr>
 				</td>
 					<td>Position<br>
-						<input type="text" name="position">
+						<select name="position">
+							<option selected="Select One">Select One</option>
+							<option value="dispatch">Dispatch</option>
+							<option value="supervisor">Supervisor</option>
+							<option value="firefighter">Firefighter</option>
+						</select>
 					</td>
-					<td>Pass<br>
-						<input type="text" name="password">
+					<td>Password<br>
+						<input type="password" name="password"><br>
 					</td>
 				</tr>
+				<tr> 
+					<td></td>
+					<td>Re-Enter Password<br>
+						<input type="text" name="verify"><br>
+					</td>
+						
 			</table>
 			<button type="submit">Submit</button>
 		</form>
