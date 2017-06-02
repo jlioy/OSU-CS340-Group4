@@ -9,6 +9,7 @@
 </head>
 <body>
 	<?php include 'navigation.php' ?>
+	<div class="content">
 	<h1>Delete Fire Report</h1>
 	<div id="create">
 		<form method="post" action="DeleteFireProcess.php" onsubmit="return checkForm(this)">
@@ -27,5 +28,7 @@
 			<button type="submit">Submit</button>
 		</form>
 		</div>
+		</div>
 	<?php include 'footer.php' ?>
 </body>
+</html>

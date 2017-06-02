@@ -8,6 +8,7 @@
 <body>
 <?php
 	include('navigation.php');
+	echo "<div class='content'>";
 	echo "<h1>View Fires</h1>";
 	include 'connectvars.php';
 	$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
@@ -71,6 +72,8 @@
 
 	mysqli_free_result($result);
 	mysqli_close($conn);
+	echo "</div>";
+	include('footer.php');
 ?>
 </body>
-<?php include('footer.php'); ?>
+

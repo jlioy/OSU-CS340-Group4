@@ -9,9 +9,12 @@
 </head>
 <body>
 	<?php include 'navigation.php' ?>
+	<div class="content">
 	<h1>Home</h1>
 	<p>
 		This website is designed for users to be able to create and see important dispatch information quickly, and conveniently.
 	</p>
+	</div>
 	<?php include 'footer.php' ?>
 </body>
+</html>

@@ -9,6 +9,7 @@
 </head>
 <body>
 	<?php include 'navigation.php' ?>	
+	<div class="content">
 	<h1>Create Fire Report</h1>
 	<div id="create">
 		<form method="POST" action="AddFireProcess.php">
@@ -47,5 +48,7 @@
 			<button type="submit">Submit</button>
 		</form>
 		</div>
+		</div>
 	<?php include 'footer.php' ?>
 </body>
+</html>

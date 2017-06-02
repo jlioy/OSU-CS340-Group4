@@ -9,6 +9,7 @@
 </head>
 <body>
 	<?php include 'navigation.php' ?>
+	<div class="content">
 	<h1>Login</h1>
 	<div id="create">
 		<form method="post" action="Create.php" onsubmit="return checkForm(this)">
@@ -26,6 +27,7 @@
 			</table>
 			<button type="submit">Submit</button>
 		</form>
+		</div>
 		</div>
 	<?php include 'footer.php' ?>
 </body>

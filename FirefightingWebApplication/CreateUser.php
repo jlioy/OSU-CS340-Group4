@@ -9,6 +9,7 @@
 </head>
 <body>
 	<?php include 'navigation.php' ?>
+	<div class="content">
 	<h1>Create User</h1>
 	<div id="create">
 		<form method="post" action="CreateUserProcess.php" onsubmit="return checkForm(this)">
@@ -44,5 +45,7 @@
 			<button type="submit">Submit</button>
 		</form>
 		</div>
+		</div>
 	<?php include 'footer.php' ?>
 </body>
+</html>
