@@ -1,3 +1,11 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="css/style.css" />
+   <title>Account</title>
+</head>
+<body>
 <?php
 	include('navigation.php');
 	echo "<h1>Account</h1>";
@@ -33,12 +41,6 @@
 
 	mysqli_free_result($result);
 	mysqli_close($conn);
-	
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="utf-8">
-   <link rel="stylesheet" href="css/style.css" />
-   <title>Account</title>
-</head>
+</body>
+<?php include('footer.php');?>
