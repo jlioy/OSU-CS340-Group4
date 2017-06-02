@@ -1,10 +1,6 @@
 body{
-	padding-right: 75px;
-	padding-left: 75px;
 	background-color: #e6e6e6;
 	background-size:cover;
-	margin-left: 125px;
-	margin-right: 125px;
 	width: 100%;
 }
 
@@ -14,11 +10,13 @@ footer{
 	text-align: center;
 	font-size: 14px;
 	padding: 12px;
-	/*padding-right: 75px;*/
 	position: absolute;
 	bottom: 0;
 	width: 100%;
-	margin-right: 75px;
+}
+
+.content{
+	padding-left:25px;
 }
 
 h1{
