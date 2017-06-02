@@ -1,8 +1,11 @@
 body{
+	padding-right: 75px;
+	padding-left: 75px;
 	background-color: #e6e6e6;
 	background-size:cover;
 	margin-left: 125px;
 	margin-right: 125px;
+	width: 100%;
 }
 
 footer{
@@ -11,9 +14,11 @@ footer{
 	text-align: center;
 	font-size: 14px;
 	padding: 12px;
+	/*padding-right: 75px;*/
 	position: absolute;
 	bottom: 0;
 	width: 100%;
+	margin-right: 75px;
 }
 
 h1{
@@ -45,7 +50,9 @@ li a {
 }
 
 li a:hover {
-    background-color: #595959;
+    background-color: #b3b3b3;
+	color: #000000;
+	text-decoration: none;
 }
 
 #signup, #create{
