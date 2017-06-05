@@ -17,9 +17,11 @@
 		$dateCreated = $_POST['DateCreated'];
 $sql = "INSERT INTO FireReports(FireID,FireActivity,FireSize, IncidentCommander, FireLocation, PointOfAccess,DateCreated,FireStatus) VALUES('$fireID','$fireActivity','$fireSize','$incidentCommander', '$fireLocation','$pointOfAccess','$dateCreated', '$fireStatus')";	
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";	
+    echo "New record created successfully";
+
 }}
 	mysqli_close($conn);
+
 ?>
 <html>
 <link rel="stylesheet" href="css/style.css" />
