@@ -12,16 +12,16 @@
 	<div class="content">
 	<h1>Login</h1>
 	<div id="create">
-		<form method="post" action="Create.php" onsubmit="return checkForm(this)">
+		<form method="post" action="LoginProcess.php" onsubmit="return checkForm(this)">
 			<table id="signup" class="form">
 				<tr>
-					<td>Username<br>
-						<input type="text" name="id">
+					<td>UserID<br>
+						<input type="text" name="UserID">
 					</td>
 				</tr>
 				<tr>
 					<td>Password<br>
-						<input type="text" name="activity">
+						<input type="password" name="password">
 					</td>
 				</tr>
 			</table>

@@ -10,10 +10,11 @@
 		$userID = $_POST['userID'];
 		$position = $_POST['position'];
 		$name = $_POST['name'];
-		$password = $_POST['password'];
+		$password = md5($_POST['password']);
 $sql = "INSERT INTO USERS(UserID,Position,Name,Pass) VALUES('$userID','$position','$name','$password')";	
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";	
+	header("Refresh:2; url=Home.php");
+    echo "New record created successfully. Redirecting...";	
 }}
 	mysqli_close($conn);
 ?>

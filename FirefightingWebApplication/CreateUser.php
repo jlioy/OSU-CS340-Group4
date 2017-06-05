@@ -38,7 +38,7 @@
 				<tr> 
 					<td></td>
 					<td>Re-Enter Password<br>
-						<input type="text" name="verify"><br>
+						<input type="password" name="verify"><br>
 					</td>
 						
 			</table>
