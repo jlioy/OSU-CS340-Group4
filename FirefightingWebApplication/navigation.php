@@ -14,6 +14,7 @@
 	<nav>
 		<ul class="navigation">
 			<li><a class="<?php echo ($page == "createuser" ? "current" : "")?>" href='CreateUser.php'>Create User</a></li>
+			<li><a class="<?php echo ($page == "deleteuser" ? "current" : "")?>" href='DeleteUser.php'>Delete User</a></li>
 			<li><a class="<?php echo ($page == "deletefirereport" ? "current" : "")?>" href='DeleteFireReport.php'>Delete Fire Report</a></li>
 			<li><a class="<?php echo ($page == "deletedfires" ? "current" : "")?>" href='DeletedFires.php'>View Deleted Fires</a></li>
 			<li><a class="<?php echo ($page == "extinguishedfires" ? "current" : "")?>" href='ExtinguishedFires.php'>View Extinguished Fires</a></li>

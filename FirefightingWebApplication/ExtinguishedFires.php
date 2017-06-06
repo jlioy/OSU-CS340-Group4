@@ -18,7 +18,7 @@
 		
 	$sql = "SELECT * FROM FireReports WHERE FireReports.FireID IN (SELECT FireID FROM ExtinguishedFireReports)";
 	$result = mysqli_query($conn, $sql);
-	echo "<table id='listusers'><tr><th>Fire ID</th><th>Location</th><th>Activity</th><th>Size</th></tr><tr><td>";
+	echo "<table id='listusers'><tr><th>Fire ID</th><th>Location</th><th>Date Created</th><th>Size</th></tr><tr><td>";
 	while($row = mysqli_fetch_assoc($result)){
 		echo $row[FireID] .  "<br>";
 	}
@@ -51,7 +51,7 @@
 	$result = mysqli_query($conn, $sql);
 	echo "<td>";
 	while($row = mysqli_fetch_assoc($result)){
-		echo $row[FireActivity] . "<br>";
+		echo $row[DateCreated] . "<br>";
 	}
 	echo"</td>";
 

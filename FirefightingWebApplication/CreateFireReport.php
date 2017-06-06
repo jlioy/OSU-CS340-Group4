@@ -39,8 +39,12 @@
 						<input type="text" name="pointofaccess">
 					</td>
 					<td>Status<br>
-						<input type="number" name="status">
-					</td>
+                                                <select name="status">
+                                                        <option selected="Select One">Select One</option>
+                                                        <option value="1">active</option>
+                                                        <option value="0">extinguished</option>
+                                                </select>
+                                        </td>
 					<td>Date<br>
                                                 <input type="date" name="DateCreated"></td>
 				</tr>
