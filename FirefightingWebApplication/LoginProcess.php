@@ -15,6 +15,10 @@
 		$count = mysqli_num_rows($result);
 		if($count > 0) {
 			$_SESSION["user"] = $_POST['UserID'];
+			while($row = $result->fetch_assoc()) {
+				$position = $row["Position"];
+				$_SESSION["position"] = $position;
+			}
 			header("Location: Home.php");
 		}
 		else {
