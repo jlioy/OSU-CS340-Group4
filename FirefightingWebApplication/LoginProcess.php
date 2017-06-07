@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	//$_SESSION["user"] = $_POST['UserID'];
+	$_SESSION["user"] = $_POST['UserID'];
 	include 'connectvars.php';
 	$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 		if (!$conn) {
@@ -15,6 +15,10 @@
 		$count = mysqli_num_rows($result);
 		if($count > 0) {
 			$_SESSION["user"] = $_POST['UserID'];
+			while($row = $result->fetch_assoc()) {
+				$position = $row["Position"];
+				$_SESSION["position"] = $position;
+			}
 			header("Location: Home.php");
 		}
 		else {

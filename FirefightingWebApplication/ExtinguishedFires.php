@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +8,15 @@
 </head>
 <body>
 <?php
-	include('navigation.php');
+	if($_SESSION["position"] == "supervisor"){
+		include 'navigation.php';
+	}else if($_SESSION["position"] == "firefighter"){
+		include 'fighternav.php';
+	}else if($_SESSION["position"] == "dispatch"){
+		include 'dispatchnav.php';
+	}else{
+		include 'usernav.php';
+	}
 	echo "<div class='content'>";
         echo"<h2>Extinguished Fires:</h2>";
 	include 'connectvars.php';

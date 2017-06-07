@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,7 +9,17 @@
    </script>
 </head>
 <body>
-	<?php include 'navigation.php' ?>
+	<?php 
+	if($_SESSION["position"] == "supervisor"){
+		include 'navigation.php';
+	}else if($_SESSION["position"] == "firefighter"){
+		include 'fighternav.php';
+	}else if($_SESSION["position"] == "dispatch"){
+		include 'dispatchnav.php';
+	}else{
+		include 'usernav.php';
+	}
+	?>
 	<div class="content">
 	<h1>Login</h1>
 	<div id="create">
