@@ -19,11 +19,6 @@
 						<input type="text" name="id">
 					</td>
 				</tr>
-				<tr>
-					<td>Location<br>
-						<input type="text" name="location">
-					</td>
-				</tr>
 			</table>
 			<button type="submit">Submit</button>
 		</form>
