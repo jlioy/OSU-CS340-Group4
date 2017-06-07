@@ -15,10 +15,18 @@
 		$pointOfAccess = $_POST['pointofaccess'];
 		$fireStatus = $_POST['status'];
 		$dateCreated = $_POST['DateCreated'];
-$sql = "INSERT INTO FireReports(FireID,FireActivity,FireSize, IncidentCommander, FireLocation, PointOfAccess,DateCreated,FireStatus) VALUES('$fireID','$fireActivity','$fireSize','$incidentCommander', '$fireLocation','$pointOfAccess','$dateCreated', '$fireStatus')";	
+
+$check = "SELECT * FROM FireReports WHERE FireID = $fireID";
+$returned = $conn->query($check);
+if(mysql_num_rows($returned) === 0){
+$sql = "INSERT INTO FireReports(FireID,FireActivity,FireSize, IncidentCommander, FireLocation, PointOfAccess,DateCreated,FireStatus) VALUES('$fireID','$fireActivity','$fireSize','$incidentCommander', '$fireLocation','$pointOfAccess','$dateCreated', '$fireStatus')";
+}
+else{
+$sql = "REPLACE INTO FireReports(FireID,FireActivity,FireSize, IncidentCommander, FireLocation, PointOfAccess,DateCreated,FireStatus) VALUES('$fireID','$fireActivity','$fireSize','$incidentCommander', '$fireLocation','$pointOfAccess','$dateCreated', '$fireStatus')";
+}
+
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
-
 }}
 	mysqli_close($conn);
 
