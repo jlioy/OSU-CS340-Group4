@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,10 +8,12 @@
 </head>
 <body>
 <?php
+	include 'connectvars.php';
+	
 	include('navigation.php');
 	echo "<div class='content'>";
 	echo "<h1>Account</h1>";
-	include 'connectvars.php';
+	//include 'connectvars.php';
 	$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 		if (!$conn) {
 			die('Could not connect: ' . mysql_error());

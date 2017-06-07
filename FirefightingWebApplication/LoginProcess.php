@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	//$_SESSION["user"] = $_POST['UserID'];
+	$_SESSION["user"] = $_POST['UserID'];
 	include 'connectvars.php';
 	$conn = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 		if (!$conn) {
