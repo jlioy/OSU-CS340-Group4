@@ -17,7 +17,7 @@
 			<li><a class="<?php echo ($page == "deletedfires" ? "current" : "")?>" href='DeletedFires.php'>View Deleted Fires</a></li>
 			<li><a class="<?php echo ($page == "extinguishedfires" ? "current" : "")?>" href='ExtinguishedFires.php'>View Extinguished Fires</a></li>
 			<li><a class="<?php echo ($page == "activefires" ? "current" : "")?>" href='ActiveFires.php'>View Active Fires</a></li>
-			<li><a class="<?php echo ($page == "createfirereport" ? "current" : "")?>" href='CreateFireReport.php'>Create Fire Report</a></li>
+			<li><a class="<?php echo ($page == "createfirereport" ? "current" : "")?>" href='CreateFireReport.php'>Create/Update Fire Report</a></li>
                         <li><a class="<?php echo ($page == "login" ? "current" : "")?>" href='Login.php'>Login</a></li>
 			<li><a class="<?php echo ($page == "account" ? "current" : "")?>" href='Account.php'>Account List</a></li>
 			<li><a class="<?php echo ($page == "home" ? "current" : "")?>" href='Home.php'>Home</a></li>

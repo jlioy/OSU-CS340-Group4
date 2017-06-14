@@ -27,7 +27,7 @@
 		
 	$sql = "SELECT * FROM USERS";
 	$result = mysqli_query($conn, $sql);
-	echo "<table id='listusers'><tr><th>Name</th><th>Position</th></tr><tr><td>";
+	echo "<table id='listusers'><tr><th>Name</th><th>User ID</th></tr><tr><td>";
 	while($row = mysqli_fetch_assoc($result)){
 		echo $row[Name] .  "<br>";
 	}
@@ -45,7 +45,7 @@
 	$result = mysqli_query($conn, $sql);
 	echo "<td>";
 	while($row = mysqli_fetch_assoc($result)){
-		echo $row[Position] . "<br>";
+		echo $row[UserID] . "<br>";
 	}
 	echo"</td>";
 

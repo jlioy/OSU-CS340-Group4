@@ -16,18 +16,16 @@
 		$fireStatus = $_POST['status'];
 		$dateCreated = $_POST['DateCreated'];
 
-$check = "SELECT * FROM FireReports WHERE FireID = $fireID";
-$returned = $conn->query($check);
-if(mysql_num_rows($returned) === 0){
+$check = "DELETE FROM FireReports WHERE FireID = $fireID";
+$conn->query($check);
 $sql = "INSERT INTO FireReports(FireID,FireActivity,FireSize, IncidentCommander, FireLocation, PointOfAccess,DateCreated,FireStatus) VALUES('$fireID','$fireActivity','$fireSize','$incidentCommander', '$fireLocation','$pointOfAccess','$dateCreated', '$fireStatus')";
 }
-else{
-$sql = "REPLACE INTO FireReports(FireID,FireActivity,FireSize, IncidentCommander, FireLocation, PointOfAccess,DateCreated,FireStatus) VALUES('$fireID','$fireActivity','$fireSize','$incidentCommander', '$fireLocation','$pointOfAccess','$dateCreated', '$fireStatus')";
-}
-
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
-}}
+    echo "Redirecting to previous page...";
+   $url='CreateFireReport.php';
+   echo '<META HTTP-EQUIV=REFRESH CONTENT="2; '.$url.'">';
+
+}
 	mysqli_close($conn);
 
 ?>
