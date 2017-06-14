@@ -1,0 +1,83 @@
+form h1 {
+    text-align: center;
+    font-family: sans-serif;
+    color: white;
+    font-weight: 100;
+}
+
+form {
+    background-color: #333333;
+    width: 550px;
+    margin: 20px auto;
+    padding: 30px;
+}
+
+form p {
+    text-align: center;
+    font-weight: 100;
+    font-family: sans-serif;
+    color: white;
+}
+
+form .textBox {
+    line-height: 25px;
+    font-size: 12pt;
+    margin: 10px 0;
+    width: 500px;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+    background: none;
+    font-weight: 100;
+    font-family: sans-serif;
+    color: white;
+    border-radius: 0;
+}
+
+form label {
+    display: block;
+    font-size: 16px;
+    transform: translate(5px, 30px);
+    transition: all 0.5s;
+    color: #e2e2e2;
+    font-weight: 100;
+    font-family: sans-serif;
+    color: white;
+}
+
+form .is-active,
+form .is-completed {
+    transform: translateY(5px);
+}
+
+form .is-completed {
+    color: #9f9f9f;
+}
+
+form .is-active {
+    color: #cc6600;
+}
+
+form #submit {
+    text-align: center;
+    margin-top: 30px;
+    padding: 15px 0;
+    width: 15vw;
+    min-width: 150px;
+    border: none;
+    font-weight: 100;
+    font-family: sans-serif;
+    color: white;
+    font-size: 12pt;
+    border-radius: 10px;
+    background: #cc6600;
+}
+
+@media screen and (max-width: 1000px) {
+    form {
+        width: 370px;
+    }
+    form .textBox {
+        width: 300px;
+    }
+}

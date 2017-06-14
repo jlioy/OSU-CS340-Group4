@@ -7,7 +7,6 @@
    <title>View Fires</title>
 </head>
 <body>
-<footer> Webpage Developed by Courtney Miller, Joshua Lioy, and Garrett Haley </footer>
 <?php 
 	if($_SESSION["position"] == "supervisor"){
 		include 'navigation.php';
@@ -18,6 +17,7 @@
 	}else{
 		include 'usernav.php';
 	}
+    include 'footer.php';
 	echo "<div class='content'>";
         echo"<h2>Active Fires:</h2>";
 	include 'connectvars.php';
@@ -130,5 +130,5 @@
 	echo "</div>";
 ?>
 </body>
-</html> 
 
+</html>
