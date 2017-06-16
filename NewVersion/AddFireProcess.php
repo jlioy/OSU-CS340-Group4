@@ -18,8 +18,18 @@
 $sql = "INSERT INTO FireReports(FireID,FireActivity,FireSize, IncidentCommander, FireLocation, PointOfAccess,DateCreated,FireStatus) VALUES('$fireID','$fireActivity','$fireSize','$incidentCommander', '$fireLocation','$pointOfAccess','$dateCreated', '$fireStatus')";	
 if ($conn->query($sql) === TRUE) {
     echo "New record created successfully";
+	echo "<script>setTimeout(function (){
+		window.location.href='http://web.engr.oregonstate.edu/~millcour/CS340/finalProject/repo/NewVersion/Home.php'
+		}, 2000);</script>";
 
-}}
+}else{
+	echo "Unable to create record. Redirecting...";
+			echo "<script>setTimeout(function (){
+				window.location.href='http://web.engr.oregonstate.edu/~millcour/CS340/finalProject/repo/NewVersion/CreateFireReport.php'
+			}, 2000);</script>";
+}
+
+}
 	mysqli_close($conn);
 
 ?>

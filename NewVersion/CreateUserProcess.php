@@ -30,9 +30,18 @@
 	$sql = "INSERT INTO USERS(UserID,Position,Name,Pass) VALUES('$userID','$position','$name','$password');";
 	$sql .= "INSERT INTO AdminPriv(UserID, CreateFires, DelFires, CreateAcct, MarkExt) VALUES('$userID', '$CreateFires', '$DelFires', '$CreateAcct', '$MarkExt');";
 	if ($conn->multi_query($sql) === TRUE) {
-		header("Refresh:2; url=Home.php");
-		echo "New record created successfully. Redirecting...";	
-	}}
+		echo "New record created successfully. Redirecting...";
+		echo "<script>setTimeout(function (){
+			window.location.href='http://web.engr.oregonstate.edu/~millcour/CS340/finalProject/repo/NewVersion/HomeUser.php'
+			}, 2000);</script>";		
+	}else{
+		echo "Unable to create record. Redirecting...";
+		echo "<script>setTimeout(function (){
+			window.location.href='http://web.engr.oregonstate.edu/~millcour/CS340/finalProject/repo/NewVersion/CreateUser.php'
+			}, 2000);</script>";
+	}
+	
+	}
 	mysqli_close($conn);
 	
 ?>

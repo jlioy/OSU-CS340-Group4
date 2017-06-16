@@ -28,7 +28,7 @@
         <form method="post" action="LoginProcess.php" onsubmit="return checkForm(this)">
             <h1>Login</h1>
 
-            <label for="userName">User Name</label>
+            <label for="userName">User ID</label>
             <input id="userName" type="text" name="UserID" class="textBox">
 
             <label for="password">Password</label>

@@ -9,9 +9,13 @@
 		$userID = $_POST['id'];
 $sql = "DELETE FROM `USERS` WHERE `USERS`.`UserID` = '$userID'";	
 if ($conn->query($sql) === TRUE) {
-    echo "New record successfully deleted";
-	
-}}
+    echo "Record successfully deleted. Redirecting...";
+	echo "<script>setTimeout(function (){
+		window.location.href='http://web.engr.oregonstate.edu/~millcour/CS340/finalProject/repo/NewVersion/DeleteUser.php'
+	}, 2000);</script>";
+}
+
+}
 	mysqli_close($conn);
 ?>
 <html>

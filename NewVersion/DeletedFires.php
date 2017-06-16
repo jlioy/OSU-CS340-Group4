@@ -6,6 +6,7 @@
    <link rel="stylesheet" href="css/style.css" />
    <title>View Fires</title>
 </head>
+<footer>Webpage Developed by Courtney Miller, Joshua Lioy, and Garrett Haley</footer>
 <body>
 <?php
 	if($_SESSION["position"] == "supervisor"){
@@ -81,8 +82,7 @@
 
 	mysqli_free_result($result);
 	mysqli_close($conn); 
-	echo "</div>";;
-	include('footer.php');
+	echo "</div>";
 ?>
 </body>
 

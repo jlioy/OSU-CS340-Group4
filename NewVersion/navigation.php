@@ -7,21 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
 </head>
 <body>
 	<nav id="navigation">
+			<a class="<?php echo ($page == "home" ? "current" : "")?>" href='Home.php'>Home</a>
 			<a class="<?php echo ($page == "logout" ? "current" : "")?>" href='Logout.php'>Logout</a>
 			<a class="<?php echo ($page == "createuser" ? "current" : "")?>" href='CreateUser.php'>Create User</a>
-			<a class="<?php echo ($page == "deleteuser" ? "current" : "")?>" href='DeleteUser.php'>Delete User</a>
+			<a class="<?php echo ($page == "createfirereport" ? "current" : "")?>" href='CreateFireReport.php'>Create/Update Fire Report</a><a class="<?php echo ($page == "deleteuser" ? "current" : "")?>" href='DeleteUser.php'>Delete User</a>
 			<a class="<?php echo ($page == "deletefirereport" ? "current" : "")?>" href='DeleteFireReport.php'>Delete Fire Report</a>
 			<a class="<?php echo ($page == "deletedfires" ? "current" : "")?>" href='DeletedFires.php'>View Deleted Fires</a>
 			<a class="<?php echo ($page == "extinguishedfires" ? "current" : "")?>" href='ExtinguishedFires.php'>View Extinguished Fires</a>
 			<a class="<?php echo ($page == "activefires" ? "current" : "")?>" href='ActiveFires.php'>View Active Fires</a>
-			<a class="<?php echo ($page == "createfirereport" ? "current" : "")?>" href='CreateFireReport.php'>Create Fire Report</a>
 			<a class="<?php echo ($page == "account" ? "current" : "")?>" href='Account.php'>Account List</a>
-			<a class="<?php echo ($page == "home" ? "current" : "")?>" href='Home.php'>Home</a>
 	</nav>
 	<div class="container">
   <!-- Trigger the modal with a button -->
@@ -64,7 +63,6 @@
       
     </div>
   </div>
-</div>
 		
 </body>
 </html>
@@ -100,7 +98,7 @@
 
             }
             else {
-                alert("Geocode was not successful for the following reason: " + status);
+                //alert("Geocode was not successful for the following reason: " + status);
             }
         });
 

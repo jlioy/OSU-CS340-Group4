@@ -12,13 +12,13 @@
 </head>
 <body>
 	<nav id="navigation">
+			<a class="<?php echo ($page == "home" ? "current" : "")?>" href='Home.php'>Home</a>
 			<a class="<?php echo ($page == "logout" ? "current" : "")?>" href='Logout.php'>Logout</a>
 			<a class="<?php echo ($page == "deletedfires" ? "current" : "")?>" href='DeletedFires.php'>View Deleted Fires</a>
 			<a class="<?php echo ($page == "extinguishedfires" ? "current" : "")?>" href='ExtinguishedFires.php'>View Extinguished Fires</a>
 			<a class="<?php echo ($page == "activefires" ? "current" : "")?>" href='ActiveFires.php'>View Active Fires</a>
-			<a class="<?php echo ($page == "createfirereport" ? "current" : "")?>" href='CreateFireReport.php'>Create Fire Report</a>
+			<a class="<?php echo ($page == "createfirereport" ? "current" : "")?>" href='CreateFireReport.php'>Create/Update Fire Report</a>
 			<a class="<?php echo ($page == "account" ? "current" : "")?>" href='Account.php'>Account List</a>
-			<a class="<?php echo ($page == "home" ? "current" : "")?>" href='Home.php'>Home</a>
 	</nav>
 	<div class="container">
   <!-- Trigger the modal with a button -->
@@ -97,7 +97,7 @@
 
             }
             else {
-                alert("Geocode was not successful for the following reason: " + status);
+                //alert("Geocode was not successful for the following reason: " + status);
             }
         });
 

@@ -7,11 +7,20 @@
 	}
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$fireID = $_POST['id'];
-$sql = "DELETE FROM FireReports WHERE FireID = $fireID";	
-if ($conn->query($sql) === TRUE) {
-    echo "New record successfully deleted";
-	
-}}
+		$sql = "DELETE FROM FireReports WHERE FireID = $fireID";	
+		if ($conn->query($sql) === TRUE) {
+			echo "New record successfully deleted. Redirecting...";
+			echo "<script>setTimeout(function (){
+				window.location.href='http://web.engr.oregonstate.edu/~millcour/CS340/finalProject/repo/NewVersion/Home.php'
+			}, 2000);</script>";
+		}else{
+			echo "Unable to delete record. Redirecting...";
+			echo "<script>setTimeout(function (){
+				window.location.href='http://web.engr.oregonstate.edu/~millcour/CS340/finalProject/repo/NewVersion/DeleteFireReport.php'
+			}, 2000);</script>";
+		}
+
+}
 	mysqli_close($conn);
 ?>
 <html>
