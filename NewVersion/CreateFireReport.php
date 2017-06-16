@@ -57,7 +57,7 @@
                                                 </select>
                                         </td>
 					<td>Date<br>
-                                                <input type="date" name="DateCreated"></td>
+                                                <input type="date" placeholder="mm/dd/yyyy" name="DateCreated"></td>
 				</tr>
 			</table>
 			<button type="submit">Submit</button>

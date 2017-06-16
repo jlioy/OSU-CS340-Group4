@@ -7,17 +7,17 @@
 		die('Could not connect: ' . mysql_error());
 	}
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		$fireID = $_POST['id'];
-		$fireActivity = $_POST['activity'];
-		$fireSize = $_POST['size'];
-		$incidentCommander = $_POST['commander'];
-		$fireLocation = $_POST['location'];
-		$pointOfAccess = $_POST['pointofaccess'];
-		$fireStatus = $_POST['status'];
-		$dateCreated = $_POST['DateCreated'];
+		$fireID = htmlspecialchars($_POST['id']);
+		$fireActivity = htmlspecialchars($_POST['activity']);
+		$fireSize = htmlspecialchars($_POST['size']);
+		$incidentCommander = htmlspecialchars($_POST['commander']);
+		$fireLocation = htmlspecialchars($_POST['location']);
+		$pointOfAccess = htmlspecialchars($_POST['pointofaccess']);
+		$fireStatus = htmlspecialchars($_POST['status']);
+		$dateCreated = htmlspecialchars($_POST['DateCreated']);
 $sql = "INSERT INTO FireReports(FireID,FireActivity,FireSize, IncidentCommander, FireLocation, PointOfAccess,DateCreated,FireStatus) VALUES('$fireID','$fireActivity','$fireSize','$incidentCommander', '$fireLocation','$pointOfAccess','$dateCreated', '$fireStatus')";	
 if ($conn->query($sql) === TRUE) {
-    echo "New record created successfully";
+    echo "New record created successfully. Redirecting...";
 	echo "<script>setTimeout(function (){
 		window.location.href='http://web.engr.oregonstate.edu/~millcour/CS340/finalProject/repo/NewVersion/Home.php'
 		}, 2000);</script>";

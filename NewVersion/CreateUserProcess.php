@@ -7,8 +7,8 @@
 		die('Could not connect: ' . mysql_error());
 	}
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		$userID = $_POST['userID'];
-		$position = $_POST['position'];
+		$userID = ($_POST['userID']);
+		$position = htmlspecialchars($_POST['position']);
 		if($position == "Dispatch"){
 			$CreateFires = 1;
 			$MarkExt = 1;
@@ -25,7 +25,7 @@
 			$CreateAcct = 1;
 			$MarkExt = 1;
 		}
-		$name = $_POST['name'];
+		$name = htmlspecialchars($_POST['name']);
 		$password = md5($_POST['password']);
 	$sql = "INSERT INTO USERS(UserID,Position,Name,Pass) VALUES('$userID','$position','$name','$password');";
 	$sql .= "INSERT INTO AdminPriv(UserID, CreateFires, DelFires, CreateAcct, MarkExt) VALUES('$userID', '$CreateFires', '$DelFires', '$CreateAcct', '$MarkExt');";
