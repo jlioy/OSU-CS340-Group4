@@ -32,7 +32,7 @@
 	if ($conn->multi_query($sql) === TRUE) {
 		echo "New record created successfully. Redirecting...";
 		echo "<script>setTimeout(function (){
-			window.location.href='http://web.engr.oregonstate.edu/~millcour/CS340/finalProject/repo/NewVersion/HomeUser.php'
+			window.location.href='http://web.engr.oregonstate.edu/~millcour/CS340/finalProject/repo/NewVersion/Home.php'
 			}, 2000);</script>";		
 	}else{
 		echo "Unable to create record. Redirecting...";
